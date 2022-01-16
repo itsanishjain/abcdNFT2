@@ -1,0 +1,78 @@
+
+    <%- include('partials/header') -%>
+  
+
+    
+
+    <input id="hid" type="hidden" value = '<%= JSON.stringify(collections) %>'   >
+
+
+
+
+  </body>
+
+ 
+
+  <button onclick="getAssets()">GET</button>
+
+  <input style="margin-top: 10px;" placeholder="enter the amount of ETH you want to sell it for" id='amount' type="text">
+  <p id = 'total'> </p>
+  <button id = 'sell' >SELL</button>
+
+  <p id = 'linko'></p>
+
+  
+  <div id="root" >
+
+  </div>
+
+  <button onclick="login()">Login</button>
+
+  <script>
+    let data = document.getElementById('hid').value;
+    let collections = JSON.parse(data);
+    console.log("HHIII",collections);
+
+    for(let i = 0 ; i<collections.length; i++){
+      // console.log(Object.keys(collections[i]))
+
+      contract_address = collections[i].contract_address;
+      total_collection_item = collections[i].minted_nfts.length;
+
+      console.log(contract_address,total_collection_item);
+      document.getElementById('total').innerHTML = `Total Items in your collections is:${total_collection_item}`;
+
+      
+
+
+
+      opensea_url = `https://testnets.opensea.io/assets/${contract_address}/2`
+
+      document.getElementById('linko').innerHTML =    `<a href = ${opensea_url}>Click here to view your collections</a>`;
+
+      // console.log(collections[i])
+
+      // for(let j = 0 ; j<collections[i].length; j++){   
+        
+      // }
+      
+    }
+
+    document.getElementById('sell').addEventListener('click',()=>{
+      console.log('sell btn clicked');
+      let ammount = Number(document.getElementById('amount').value);
+
+      console.log(amount)
+      sell(contract_address,total_collection_item,amount);
+
+
+      
+
+      
+    })
+    
+  </script>
+
+ 
+  <%- include('partials/footer') -%>
+</html>

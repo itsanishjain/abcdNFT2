@@ -1,0 +1,60 @@
+{
+  "response": "OK",
+  "metadata_uri": "ipfs://bafkreicgtsellshedewucb37g5zn4iiukqbntseoojh6nb4vzhdr5zvude",
+  "name": "#5",
+  "description": "This is the description of your NFT project, remember to replace this",
+  "file_url": "https://ipfs.io/ipfs/bafkreihmifwhgdgvspumtvykhno4ext4p3vhoubgvb5eitklbyqw5mtbuu",
+  "external_url": null,
+  "animation_url": null,
+  "custom_fields": {
+    "dna": "0002010",
+    "edition": 5,
+    "date": 1642340101130,
+    "compiler": "HashLips Art Engine"
+  },
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Black",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "Eyeball",
+      "value": "Red",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "Eye color",
+      "value": "Cyan",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "Iris",
+      "value": "Small",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "Shine",
+      "value": "Shapes",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "Bottom lid",
+      "value": "Low",
+      "max_value": null,
+      "display_type": null
+    },
+    {
+      "trait_type": "Top lid",
+      "value": "High",
+      "max_value": null,
+      "display_type": null
+    }
+  ],
+  "error": null
+}

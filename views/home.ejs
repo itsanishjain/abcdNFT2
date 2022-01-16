@@ -1,0 +1,101 @@
+<%- include('partials/header') -%>  
+  <title>ABCDNFT</title>
+  </head>
+  <body>
+    <h1>Home</h1>
+    <hr />
+    <h2>Upload your layers</h2>
+    <form style="margin-top: 10px;" action="/upload-layers" method="post" enctype="multipart/form-data">
+      <input name="images" type="file" multiple />
+      <button class="btn" type="submit">Upload</button>
+    </form>
+
+    <hr />
+    <h2>Generate your art collection</h2>
+
+    <form action="/generate" method="post">
+      <label>enter the number of images you want to generate <span class="error">*currently we are in beta so only generating 10 images</span></label>
+      <input name="editionSize" placeholder="eg: 10" />
+      <button type="submit">generate</button>
+    </form>
+
+    <hr />
+    <h2>Upload Images to IPFS</h2>
+    <form action="/upload-images-to-ipfs" method="post">
+    <button id='img-btn' type="submit">Upload Images</button>
+  </form>
+
+
+  <hr />
+    <h2>Upload Metadata to IPFS</h2>
+    <span class="error">*currently we are in beta so please wait for 1mins after clicking upload images button, sorry for inconvenience</span>
+    <form action="/upload-metadata-to-ipfs" method="post">
+    <button id='meta-btn' type="submit">Upload Metadata</button>
+  </form>
+
+
+  <hr />
+  <h2>Mint your cool collection</h2>
+  <span class="error">*currently we are in beta so please wait for 1 mins after clicking upload Metadata button, sorry for inconvenience</span>
+  <!-- <form action="/mint" method="post">
+  <button id='meta-btn' type="submit">Upload Metadata</button> -->
+  <a href="/mint">Mint your cool collections</a>
+</form>
+
+
+
+  </body>
+  
+  <script>
+    // write a function that enable a button after 2 mins
+    var metBtn = document.getElementById('meta-btn');
+    
+    var imgBtn = document.getElementById('img-btn');
+    imgBtn.addEventListener('click',()=>{
+      console.log('img btn clicked');
+      // document.cookie = "imgBtn=true";
+      setCookie('imgBtn','true',2);
+    })
+
+    
+    imgBtnCookieState = getCookie('imgBtn');
+    
+    if(imgBtnCookieState === 'true'){
+    metBtn.disabled = true; 
+    setCookie('imgBtn','false',2);
+    setTimeout(function(){
+      metBtn.disabled = false;
+      
+    }, 60000); // 1 mins
+  }
+
+
+  function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+  
+    
+
+  </script>
+
+  <%- include('partials/footer') -%>
+</html>
