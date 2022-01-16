@@ -1,11 +1,11 @@
 {
   "name": "#1",
   "description": "This is the description of your NFT project, remember to replace this",
-  "file_url": "https://ipfs.io/ipfs/bafkreif7pdashmvtic4bivtjwpdddbmrhlw6xmco3mxqxnnhvh2rmmi37u",
+  "file_url": "https://ipfs.io/ipfs/bafkreifr424an3igmnzwql3tz552nzqffnozipuiz6doke2uy5zxw7zyf4",
   "custom_fields": {
-    "dna": "0102020",
+    "dna": "0001022",
     "edition": 1,
-    "date": 1642340100015,
+    "date": 1642351210552,
     "compiler": "HashLips Art Engine"
   },
   "attributes": [
@@ -15,7 +15,7 @@
     },
     {
       "trait_type": "Eyeball",
-      "value": "White"
+      "value": "Red"
     },
     {
       "trait_type": "Eye color",
@@ -23,7 +23,7 @@
     },
     {
       "trait_type": "Iris",
-      "value": "Small"
+      "value": "Medium"
     },
     {
       "trait_type": "Shine",
@@ -35,7 +35,7 @@
     },
     {
       "trait_type": "Top lid",
-      "value": "High"
+      "value": "Middle"
     }
   ]
 }

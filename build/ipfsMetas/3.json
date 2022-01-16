@@ -1,15 +1,15 @@
 {
   "response": "OK",
-  "metadata_uri": "ipfs://bafkreigxtb53sgeiyjvtsi4gfzhub7phuet2vzoyjs6b7kupt2yffrhahq",
+  "metadata_uri": "ipfs://bafkreicsucw44jnrkcjbfwrkfkrdhxsc3cc3vtcmpezac5o2hvyprw3xky",
   "name": "#3",
   "description": "This is the description of your NFT project, remember to replace this",
-  "file_url": "https://ipfs.io/ipfs/bafkreiedljhgt5bkmfzzw4l6c2czfgah3qjzczlq6j2wp7vi4sibjv7pwm",
+  "file_url": "https://ipfs.io/ipfs/bafkreigif3cybgqx5jflipelpgbfzjy2troakitzumonln4hvg4zfam5d4",
   "external_url": null,
   "animation_url": null,
   "custom_fields": {
-    "dna": "0040020",
+    "dna": "0140022",
     "edition": 3,
-    "date": 1642340100540,
+    "date": 1642351210983,
     "compiler": "HashLips Art Engine"
   },
   "attributes": [
@@ -21,7 +21,7 @@
     },
     {
       "trait_type": "Eyeball",
-      "value": "Red",
+      "value": "White",
       "max_value": null,
       "display_type": null
     },
@@ -51,7 +51,7 @@
     },
     {
       "trait_type": "Top lid",
-      "value": "High",
+      "value": "Middle",
       "max_value": null,
       "display_type": null
     }

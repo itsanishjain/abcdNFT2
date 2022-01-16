@@ -111,9 +111,8 @@ app.post("/upload-metadata-to-ipfs", async (req, res) => {
 });
 
 
-app.post("/minting", async (req, res) => {
+app.get("/minting", async (req, res) => {
   console.log("Miniting......");
-
   res.render('redirect',{'message':'minting your collection wait for a moment'});
 });
 
